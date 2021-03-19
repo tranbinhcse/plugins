@@ -6,8 +6,8 @@ use Route;
 use Illuminate\Database\Eloquent\Factory;
 use Tino\Plugins\Plugin;
 use Tino\Support\Sidebar\Item;
-use $PLUGIN_NAMESPACE$\Repositories\Eloquent$PLUGIN_NAMESPACE$;
-use $PLUGIN_NAMESPACE$\Repositories\$PLUGIN_NAMESPACE$Repository;
+use $PLUGIN_NAMESPACE$\Repositories\Eloquent$STUDLY_NAME$;
+use $PLUGIN_NAMESPACE$\Repositories\$STUDLY_NAME$Repository;
 
 class $STUDLY_NAME$ extends Plugin
 {
