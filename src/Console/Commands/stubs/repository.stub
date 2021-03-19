@@ -1,0 +1,75 @@
+<?php
+
+namespace $PLUGIN_NAMESPACE$\Repositories;
+
+use Carbon\Carbon;
+
+interface $STUDLY_NAME$Repository
+{
+    /**
+     * Paginate registered users.
+     *
+     * @param $perPage
+     * @param null $search
+     * @param null $status
+     * @return mixed
+     */
+    public function paginate($perPage, $search = null, $status = null);
+
+    /**
+     * Find user by its id.
+     *
+     * @param $id
+     * @return null|User
+     */
+    public function find($id);
+
+    /**
+     * Create new user.
+     *
+     * @param array $data
+     * @return mixed
+     */
+    public function create(array $data);
+
+    /**
+     * Update user specified by it's id.
+     *
+     * @param $id
+     * @param array $data
+     * @return User
+     */
+    public function update($id, array $data);
+
+    /**
+     * Delete user with provided id.
+     *
+     * @param $id
+     * @return mixed
+     */
+    public function delete($id);
+
+    /**
+     * Number of users in database.
+     *
+     * @return mixed
+     */
+    public function count();
+
+    /**
+     * Number of users with provided status.
+     *
+     * @param $status
+     * @return mixed
+     */
+    public function countByStatus($status);
+
+    /**
+     * Get latest {$count} users from database.
+     *
+     * @param $count
+     * @return mixed
+     */
+    public function latest($count = 20);
+    
+}

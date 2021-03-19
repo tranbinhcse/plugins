@@ -1,0 +1,13 @@
+<?php
+
+namespace $PLUGIN_NAMESPACE$\Repositories;
+
+use Carbon\Carbon;
+use DB;
+use Illuminate\Database\SQLiteConnection;
+
+class Eloquent$STUDLY_NAME$ implements $STUDLY_NAME$Repository
+{
+
+
+}

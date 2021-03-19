@@ -1,0 +1,39 @@
+<?php
+
+namespace $PLUGIN_NAMESPACE$\\Presenters;
+
+use Tino\Support\Enum\UserStatus;
+use Tino\Presenters\Presenter;
+use Illuminate\Support\Str;
+
+class $STUDLY_NAME$Presenter extends Presenter
+{
+    public function name()
+    {
+        return $this->model->name;
+    }
+
+    /**
+     * Determine css class used for status labels
+     * inside the users table by checking user status.
+     *
+     * @return string
+     */
+    public function labelClass()
+    {
+        switch ($this->model->status) {
+            case UserStatus::ACTIVE:
+                $class = 'success';
+                break;
+
+            case UserStatus::BANNED:
+                $class = 'danger';
+                break;
+
+            default:
+                $class = 'warning';
+        }
+
+        return $class;
+    }
+}
