@@ -1,6 +1,6 @@
 <?php
 
-namespace $PLUGIN_NAMESPACE$\\Presenters;
+namespace $PLUGIN_NAMESPACE$\Presenters;
 
 use Tino\Support\Enum\UserStatus;
 use Tino\Presenters\Presenter;

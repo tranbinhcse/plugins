@@ -104,10 +104,16 @@ class GeneratePluginCommand extends PluginCommand
      */
     protected function getFiles()
     {
+
+        $migration = date('y').'_'.date('m').'_'.date('d'). '_' . rand(0,999999) .'_'.'create_'.ucfirst($this->studlyName()).'_table';
         return [
             'routes/web.stub' => 'routes/web.php',
             'routes/api.stub' => 'routes/api.php',
             'views/index.stub' => 'resources/views/index.blade.php',
+            'views/add.stub' => 'resources/views/add.blade.php',
+            'views/edit.stub' => 'resources/views/edit.blade.php',
+            'views/list.stub' => 'resources/views/list.blade.php',
+            'views/view.stub' => 'resources/views/view.blade.php',
             'config.stub' => 'config/config.php',
             'composer.stub' => 'composer.json',
             'assets/js/app.stub' => 'resources/assets/js/app.js',
@@ -124,7 +130,7 @@ class GeneratePluginCommand extends PluginCommand
             'eloquent.stub' => 'src/Repositories/Eloquent' . $this->studlyName() . ".php",
             'controller.stub' => 'src/Http/Controllers/Web/' . $this->studlyName() . "Controller.php",
             'factories.stub' => 'database/factories/' . $this->studlyName() . "Factory.php",
-            'migration.stub' => 'database/migrations/create_' . $this->studlyName() . "_table.php",
+            'migration.stub' => 'database/migrations/' . $migration . ".php",
         ];
     }
 

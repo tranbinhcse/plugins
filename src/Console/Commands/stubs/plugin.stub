@@ -57,7 +57,7 @@ class $STUDLY_NAME$ extends Plugin
      */
     protected function registerRepositories()
     {
-        $this->app->singleton($PLUGIN_NAMESPACE$Repository::class, Eloquent$PLUGIN_NAMESPACE$::class);
+        $this->app->singleton($STUDLY_NAME$Repository::class, Eloquent$STUDLY_NAME$::class);
 
     }
 
@@ -134,7 +134,7 @@ class $STUDLY_NAME$ extends Plugin
     private function registerFactories()
     {
         if (! $this->app->environment('production') && $this->app->runningInConsole()) {
-            $this->app->make(Factory::class)->load(__DIR__ . '/../database/factories');
+            // $this->app->make(Factory::class)->load(__DIR__ . '/../database/factories');
         }
     }
 }

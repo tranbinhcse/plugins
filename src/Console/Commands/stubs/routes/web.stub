@@ -10,6 +10,4 @@
 |
 */
 
-Route::prefix('$SNAKE_NAME$')->group(function () {
-    Route::get('/', '$STUDLY_NAME$Controller@index')->middleware('auth');
-});
+Route::resource('$SNAKE_NAME$', '$STUDLY_NAME$Controller')->middleware('permission:$SNAKE_NAME$.manage');

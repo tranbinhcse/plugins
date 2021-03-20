@@ -5,7 +5,7 @@ namespace $PLUGIN_NAMESPACE$\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Tino\Presenters\Traits\Presentable;
-use $PLUGIN_NAMESPACE$\\Presenters\$STUDLY_NAME$Presenter;
+use $PLUGIN_NAMESPACE$\Presenters\$STUDLY_NAME$Presenter;
 
 class $STUDLY_NAME$ extends Model
 {
